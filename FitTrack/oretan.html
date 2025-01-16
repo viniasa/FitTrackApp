@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulasi Energi dan Kalori</title>
+  <link rel="stylesheet" href="oretan.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Simulasi Energi dan Kalori</h1>
+    <p>Masukkan data BMI dan aktivitas fisik Anda untuk menghitung energi yang terbakar!</p>
+
+    <form id="calorieForm">
+      <label for="weight">Berat Badan (kg):</label>
+      <input type="number" id="weight" placeholder="Masukkan berat badan..." required>
+
+      <label for="activity">Pilih Aktivitas:</label>
+      <select id="activity">
+        <option value="6">Berlari (6 MET)</option>
+        <option value="3">Berjalan (3 MET)</option>
+        <option value="8">Bersepeda (8 MET)</option>
+      </select>
+
+      <label for="duration">Durasi Aktivitas (menit):</label>
+      <input type="number" id="duration" placeholder="Masukkan durasi..." required>
+
+      <button type="submit">Hitung Kalori</button>
+    </form>
+
+    <div id="result" class="result">
+      <h2>Hasil Perhitungan</h2>
+      <p id="caloriesBurned">Kalori yang terbakar: -</p>
+      <p id="energy">Energi yang dikeluarkan: - Joule</p>
+    </div>
+  </div>
+
+  <script src="oretan.js"></script>
+</body>
+</html>
