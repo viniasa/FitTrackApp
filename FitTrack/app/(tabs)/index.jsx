@@ -6,6 +6,13 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity 
+        style={styles.profileButton}
+        onPress={() => router.push("/(tabs)/components/ProfileResult")} // Navigasi ke Profil
+      >
+        <Text style={styles.profileButtonText}>Profile</Text>
+      </TouchableOpacity>
+
       <Image 
         source={require("../../app/icon.png")} 
         style={styles.icon} 
@@ -33,6 +40,7 @@ export default function Index() {
         <Text style={styles.buttonText}>Articles</Text>
       </TouchableOpacity>
     </View>
+    
   );
 }
 
@@ -68,6 +76,20 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   buttonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  profileButton: {
+    position: 'absolute',
+    top: 40,  // Jarak dari atas
+    right: 20, // Jarak dari kanan
+    backgroundColor: "#469a9f",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 25,
+  },
+  profileButtonText: {
     color: "white",
     fontSize: 16,
     fontWeight: "bold",
